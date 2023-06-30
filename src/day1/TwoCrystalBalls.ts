@@ -5,9 +5,9 @@ export default function two_crystal_balls(breaks: boolean[]): number {
     let doesBreak = false
     let floor = 0
 
-    while(!doesBreak) {
-        floor += jumpSize
+    for(floor; floor<breaks.length;floor+=jumpSize){
         doesBreak = breaks[floor]
+        if(doesBreak) break
     }
 
     let breakingFloor = -1
